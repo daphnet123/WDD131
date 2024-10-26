@@ -6,16 +6,6 @@ body {
   padding: 0;
 }
 
-.skiptocontent {
-  position: absolute;
-  top: -40px;
-  left: 0;
-}
-
-.skiptocontent a:focus {
-  top: 0;
-}
-
 header {
   padding: 20px;
   border-top: 2px solid #AF1B3F;
@@ -38,10 +28,6 @@ nav ul {
   margin: 0 auto;
 }
 
-nav ul li {
-  padding: 0 10px;
-}
-
 nav a {
   color: #AF1B3F;
   text-decoration: none;
@@ -62,12 +48,12 @@ main {
 }
 
 .article-container {
-  border-right: 2px solid #AF1B3F;
-  padding: 0 20px;
-  margin-bottom: 40px;
   display: grid;
   grid-template-columns: 1fr 2fr;
   gap: 20px;
+  border-right: 2px solid #AF1B3F;
+  padding: 0 20px;
+  margin-bottom: 40px;
 }
 
 .book-info {
@@ -83,7 +69,7 @@ main {
 .book-details h2 {
   font-size: 1.8rem;
   color: #AF1B3F;
-  margin-top: -10px; 
+  margin-top: -10px;
 }
 
 .book-details img {
