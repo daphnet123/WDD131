@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.form-container {
+    display: grid;
+    place-items: center;
+}
+
+.credit-card-form {
+    display: grid;
+    gap: 1rem;
+    grid-template-areas:
+        "card-front card-back"
+        "submit submit";
+}
+
+.card {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    background-color: white;
+}
+
+.card-front {
+    grid-area: card-front;
+    display: grid;
+    gap: 0.5rem;
+}
+.card-back {
+    grid-area: card-back;
+    display: grid;
+    gap: 0.5rem;
+    align-content: center;
+}
+.back-bar {
+    height: 10px;
+    background-color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.submit-button {
+    grid-area: submit;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.submit-button:hover {
+    background-color: #2980b9;
+}
