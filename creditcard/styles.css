@@ -15,21 +15,28 @@ body {
 .form-container {
     display: grid;
     place-items: center;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    width: 400px;
+    max-width: 90vw;
 }
 
 .credit-card-form {
     display: grid;
-    gap: 1rem;
+    gap: 1.5rem;
     grid-template-areas:
-        "card-front card-back"
-        "submit submit";
+        "card-front"
+        "card-back"
+        "submit";
 }
 
 .card {
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    background-color: white;
+    background-color: #fafafa;
 }
 
 .card-front {
@@ -57,7 +64,16 @@ body {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
 }
 .submit-button:hover {
     background-color: #2980b9;
+}
+
+.favicon-img {
+    display: block;
+    margin: 1rem auto 0;
+    width: 32px;
+    height: 32px;
+    opacity: 0.8;
 }
