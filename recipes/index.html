@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Daphne Tryk">
+  <title>Daphne's Recipe Book</title>
+  <meta name="description" content="Discover and share delicious recipes with our Recipe Book. Perfect for food lovers and home chefs!">
+  <link rel="stylesheet" href="recipes.css">
+
+  <meta property="og:title" content="Recipe Book - Share and Discover Recipes">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Discover and share delicious recipes with our Recipe Book. Perfect for food lovers and home chefs!">
+  <meta property="og:image" content="images/recipe-book-preview.jpg">
+  <meta property="og:url" content="https://yourwebsite.com">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Recipe Book - Share and Discover Recipes">
+  <meta name="twitter:description" content="Discover and share delicious recipes with our Recipe Book. Perfect for food lovers and home chefs!">
+  <meta name="twitter:image" content="images/recipe-book-preview.jpg">
+
+  <link rel="icon" href="images/recipe-book.png" type="image/png">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="images/recipe-book.png" alt="Recipe Book Logo">
+      <h1>Daphne's Recipe Book</h1>
+    </div>
+    <form class="search-form">
+      <input type="text" placeholder="Search for recipes" aria-label="Search for recipes">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+  <main>
+    <section class="recipes">
+      <article class="recipe">
+        <img src="images/recipe1.jpg" alt="Recipe 1">
+        <h2>Spaghetti Bolognese</h2>
+        <p class="description">A classic Italian pasta dish with a rich and savory sauce.</p>
+        <div class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star">⭐</span>
+          <span aria-hidden="true" class="icon-star-empty">☆</span>
+        </div>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>Recipe icons created by <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Freepik - Flaticon</a></p>
+    <div class="social">
+      <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates -->
+      <a href="#"><img src="images/instagram_icon.svg" alt="Instagram"></a>
+      <a href="#"><img src="images/youtube_icon.svg" alt="YouTube"></a>
+      <a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest"></a>
+    </div>
+  </footer>
+  <script src="main.js" type="module"></script>
+</body>
+</html>
