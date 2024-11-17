@@ -1,14 +1,11 @@
-// Initialize participant count
 let participantCount = 1;
 
-// Add event listener to "Add Participant" button
 document.getElementById('add').addEventListener('click', function() {
   participantCount++;
   const newParticipantHTML = participantTemplate(participantCount);
   document.getElementById('add').insertAdjacentHTML('beforebegin', newParticipantHTML);
 });
 
-// Function to generate participant template HTML
 function participantTemplate(count) {
   return `
     <section class="participant${count}">
@@ -51,7 +48,6 @@ function participantTemplate(count) {
   `;
 }
 
-// Form submission event listener
 document.querySelector('form').addEventListener('submit', function(event) {
   event.preventDefault();
   const totalFee = totalFees();
@@ -62,20 +58,17 @@ document.querySelector('form').addEventListener('submit', function(event) {
     total: totalFee,
   });
 
-  // Hide form and show summary message
   document.querySelector('form').style.display = 'none';
   document.getElementById('summary').innerHTML = message;
   document.getElementById('summary').style.display = 'block';
 });
 
-// Calculate total fees function
 function totalFees() {
   let feeElements = document.querySelectorAll("[id^=fee]");
   feeElements = [...feeElements];
   return feeElements.reduce((sum, elem) => sum + parseFloat(elem.value || 0), 0);
 }
 
-// Success message template
 function successTemplate(info) {
   return `
     <p>Thank you, ${info.name}, for registering. You have registered ${info.count} participants and owe $${info.total} in fees.</p>
