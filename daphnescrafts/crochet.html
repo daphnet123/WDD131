@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crochet Projects - Daphne's Crafts</title>
+  <link type="text/css" rel="stylesheet" href="styles/style.css" />
+  <script type="module" src="main.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Daphne's Crafts - Crochet Projects</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="crochet.html" class="active">Craft Categories</a>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Crochet Projects</h2>
+
+      <button class="collapsible">Baby Blankets</button>
+      <div class="content">
+        <p>Here are some of the baby blankets I've made! If you want to make this, here's what you'll need:
+            <p>10mm Crochet hook</p>
+            <p>2 skeins of Bernat Baby Blanket yarn</p>
+            <p>When you're stitching, I recommend to chain 75-100, depending on how wide you want the blanket.</p>
+            <p>Then Double Crochet the rest of the time until you like the length of the blanket.</p>
+            <div class="image-gallery">
+                <img id="baby-blanket-green" src="images/baby-blanket-green.png" alt="Green baby blanket">
+                <img id="baby-blanket-lilac" src="images/baby-blanket-lilac.png" alt="Lilac baby blanket">
+                <div class="gallery-controls">
+                    <button id="prev-image">Previous</button>
+                    <button id="next-image">Next</button>
+                </div>
+            </div>
+      </div>
+
+      <button class="collapsible">Blankets</button>
+      <div class="content">
+        <p>Here are some blankets I have been working on. These typically take longer because they are a lot larger in size compared to a baby blanket.</p>
+        <p>The types of yarn I use vary depending on the texture I want. Same with hook size and stitch type, but I prefer Double Crochet stitches overall.</p>
+        <div class="image">
+            <img id="blanket-red" src="images/blanket-red.png" alt="In-progress Kansas City Chiefs Blanket">
+        </div>
+      </div>
+
+      <button class="collapsible">Plushies</button>
+      <div class="content">
+        <p>I've really only made 2 plushies but hope to make more soon once I get patterns.</p>
+        <p>I'll post pictures of more plushies once I start making them again.</p>
+        <div class="image-gallery">
+            <img id="plushie-teddy" src="images/plushie-teddy.png" alt="Teddy bear plushie">
+            <img id="plushie-bunny" src="images/plushie-bunny.png" alt="Bunny plushie">
+            <div class="gallery-controls">
+                <button id="prev-image">Previous</button>
+                <button id="next-image">Next</button>
+            </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>2024 Daphne's Crafts</p>
+  </footer>
+
+  <script>
+    // Collapsible functionality
+    document.querySelectorAll(".collapsible").forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const content = button.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        }
+      });
+    });
+  </script>
+</body>
+</html>
