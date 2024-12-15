@@ -1,10 +1,8 @@
-// Export an array of image paths for baby blankets
 export const babyBlanketImages = [
     'images/baby-blanket-green.png',
     'images/baby-blanket-lilac.png'
 ];
   
-// Updated showBabyBlankets function
 export function showBabyBlankets() {
     const content = document.getElementById('content');
     content.innerHTML = `
@@ -19,26 +17,22 @@ export function showBabyBlankets() {
       </div>
     `;
   
-// Add event listeners for the buttons to switch images
 const prevButton = document.getElementById('prev-image');
 const nextButton = document.getElementById('next-image');
 const babyBlanketImage = document.getElementById('baby-blanket-image');
 let currentIndex = 0;
   
-// Event listener for the "Previous" button
 prevButton.addEventListener('click', () => {
     currentIndex = (currentIndex === 0) ? babyBlanketImages.length - 1 : currentIndex - 1;
     babyBlanketImage.src = babyBlanketImages[currentIndex];
 });
   
-// Event listener for the "Next" button
 nextButton.addEventListener('click', () => {
     currentIndex = (currentIndex === babyBlanketImages.length - 1) ? 0 : currentIndex + 1;
     babyBlanketImage.src = babyBlanketImages[currentIndex];
     });
 }
   
-// No changes needed for the showBlankets and showPlushies functions
 export function showBlankets() {
     const content = document.getElementById('content');
     content.innerHTML = `
